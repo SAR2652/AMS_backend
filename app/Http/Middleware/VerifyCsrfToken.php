@@ -18,7 +18,7 @@ class VerifyCsrfToken extends Middleware
      *
      * @var array
      */
-    protected $except = [
+    protected $except = [ 'http://localhost/ves_hacks/public/api/postAsset/*'
         //
     ];
 }
