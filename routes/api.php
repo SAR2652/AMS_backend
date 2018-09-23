@@ -19,3 +19,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/postAsset', 'APIController@postAsset');
 Route::post('/postAsset', 'APIController@postAsset');
+Route::get('/unapproved','APIController@unapprovedUsers');
+Route::post('/unapproved','APIController@unapprovedUsers');
+Route::get('/userlist','APIController@userList');
+Route::post('/userlist','APIController@userList');
+Route::get('/setUser','APIController@setUser');
+Route::post('/setUser','APIController@setUser');
+Route::get('/postUser','APIController@postUser');
+Route::post('/postUser','APIController@postUser');
+Route::get('/getFrom','APIController@reqFromDep');
+Route::post('/getFrom','APIController@reqFromDep');
+Route::get('/getTo','APIController@reqToDep');
+Route::post('/getTo','APIController@reqToDep');
+
