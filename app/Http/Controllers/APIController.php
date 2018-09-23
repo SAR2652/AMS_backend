@@ -105,6 +105,17 @@ class APIController extends Controller
         return $result;
 
     }
+    public function getAssets()
+    {
+        $response = DB::table('assets')->distinct()->get();
+        return $response;
+    }
+    public function approveRequest(Request $request)
+    {
+        $order_id = $request->order_id;
+        $response = DB::table('orders')->where('order_id',$order_id)->update(['approved' => 1]);
+        return "Order Approved successfully";     
+    }
     //FOR Staff.Function to return the list of all the requests for assets sent by the staff .
     public function reqToStaff(Request $request)
     {

@@ -31,7 +31,7 @@ Route::get('/reqFromDep','APIController@reqFromDep');
 Route::post('/reqFromDep','APIController@reqFromDep');
 Route::get('/reqToDep','APIController@reqToDep');
 Route::post('/reqToDep','APIController@reqToDep');
-Route::get('/userDetail','APIController@userDetail');
+Route::get('/userDetail','APIControllser@userDetail');
 Route::post('/userDetail','APIController@userDetail');
 Route::get('/reqToStaff','APIController@reqToStaff');
 Route::post('/reqToStaff','APIController@reqToStaff');
@@ -39,4 +39,7 @@ Route::get('/reqFromStaff','APIController@reqFromStaff');
 Route::post('/reqFromStaff','APIController@reqFromStaff');
 Route::get('/assetOwned','APIController@assetOwned');
 Route::post('/assetOwned','APIController@assetOwned');
+Route::get('/getAssets', 'APIController@getAssets');
+Route::get('/approveRequest', 'APIController@approveRequest');
+
 
