@@ -74,7 +74,7 @@ class APIController extends Controller
            $user->email=$obj->email;
            $user->assets_held="";
            $user->assets_quantity="";
-           $user->role=$arr[(int)$role[1]];
+           $user->role=$arr[(int)$role[1]-1];
            $user->save();
        }
       
