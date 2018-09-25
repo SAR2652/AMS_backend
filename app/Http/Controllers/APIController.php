@@ -142,8 +142,8 @@ class APIController extends Controller
         for($i=0;$i<sizeof($result);$i++)
         {
             $name=Staff::select("name")->where("uid","=",$result[$i]->Request_by)->get();
-            $fromname=$name[0]["name"];
-            $result[$i]->fromname=$fromname;
+            $toname=$name[0]["name"];
+            $result[$i]->toname=$fromname;
             $asset_name=Asset::select("asset_name")->where("asset_id","=",$result[$i]->asset_id)->get();
             $assetn=$asset_name[0]["asset_name"];
             $result[$i]->asset_name=$assetn;
